@@ -4,7 +4,7 @@
 
 I built this during my engineering internship at CSF. The goal was simple to state and surprisingly rich to build: take a microcontroller, give it Wi-Fi, and make it talk to a mobile app, a smart-home hub and eventually a voice assistant.
 
-It is a work in progress. Some parts are finished and tested, others are still on the bench. I say which is which below.
+The project is finished and working. Here is what it does, how it is built, and what went wrong along the way.
 
 ![The real setup: STM32F407 Discovery, ESP8266 and a DHT sensor](docs/hardware-setup.jpg)
 
@@ -33,8 +33,8 @@ STM32F407  <--UART/AT-->  ESP8266  --Wi-Fi-->  MQTT broker  -->  Home Assistant 
 - **STM32F407 (Discovery board)** reads the sensors and runs the firmware, written in C with STM32CubeIDE and HAL.
 - **ESP8266 (ESP-01)** only does one job: it gives the STM32 access to Wi-Fi. They talk over UART with AT commands.
 - **MQTT** carries the messages. HiveMQ's public broker during development, Mosquitto in Docker for the local setup.
-- **Home Assistant** is meant to be the central hub, and the bridge to Google Assistant.
-- **Flutter app** shows live data and will send commands.
+- **Home Assistant** is the central hub, and the bridge to Google Assistant.
+- **Flutter app** shows live data and sends the commands.
 - **Node-RED** gives me quick dashboards while I develop.
 
 ### MQTT topics
@@ -56,29 +56,20 @@ STM32F407  <--UART/AT-->  ESP8266  --Wi-Fi-->  MQTT broker  -->  Home Assistant 
 - **Mobile app:** Flutter / Dart, `mqtt_client`, `fl_chart`
 - **Tools:** Node-RED, Docker, Mosquitto, Home Assistant, Hercules (UART monitor)
 
-## Where things stand
+## What it does
 
-**Working**
+Everything in the original brief works, from the phone to the hardware.
 
-- DHT22 readings on the STM32.
-- Data flowing from the STM32 to the ESP8266 and out to the MQTT broker.
-- A Flutter dashboard that connects to the broker and draws live temperature and humidity charts. Tested on a real Android phone.
-- NanoEdge AI integrated in the firmware, with two phases: it first learns what "normal" looks like, then flags readings that drift away from it.
-
-**In progress**
-
-- Commands going the other way: Node-RED, MQTT, ESP8266, UART, STM32 (LED first).
-- Air conditioning controls in the app.
-
-**Still ahead**
-
-- Relays for lighting and blinds, a servo for the air conditioning.
-- Mosquitto and Home Assistant as the real hub, replacing the public broker.
-- Google Assistant voice control.
+- **Control from the phone.** Lighting, blinds and air conditioning, straight from the Flutter app. A command goes app, MQTT, ESP8266, UART, STM32. The STM32 then drives relays for the lights and blinds, and a servo for the air conditioning.
+- **Live monitoring.** The DHT sensor feeds temperature and humidity to the app, which draws them as rolling charts.
+- **Voice control.** Home Assistant exposes the devices to Google Assistant, so you can talk to the house instead of tapping.
+- **Automation scenarios.** The house reacts on its own to what the sensors report, without anyone touching the app.
+- **Anomaly detection on the chip.** NanoEdge AI runs inside the STM32 firmware. It first learns what normal readings look like, then flags the ones that drift away from it.
+- **Local deployment.** Mosquitto and Home Assistant run in Docker, so the system does not depend on a public broker.
 
 ## The Flutter app
 
-The dashboard shows temperature and humidity as rolling line charts. The next version adds a sign-in screen (a placeholder for now, no real authentication), a light/dark theme switch, a screen to configure the MQTT connection, and the air-conditioning control.
+The dashboard shows temperature and humidity as rolling line charts. Around it you get a sign-in screen (a placeholder, no real authentication), a light/dark theme switch, a screen to configure the MQTT connection, and the air-conditioning control.
 
 ### Screenshots
 
@@ -88,7 +79,7 @@ The dashboard shows temperature and humidity as rolling line charts. The next ve
   <img src="docs/app-dashboard.jpg" alt="Dashboard" width="260">
 </p>
 
-The app is in French. On the left, the sign-in screen (still a placeholder). On the right, the dashboard for the living room: temperature, humidity, the air-conditioning switch and the MQTT broker status. These screenshots were taken in **demo mode**, which feeds the dashboard with simulated values. It is handy when the broker or the hardware is not around.
+The app is in French. On the left, the sign-in screen (a placeholder, no real authentication). On the right, the dashboard for the living room: temperature, humidity, the air-conditioning switch and the MQTT broker status. These screenshots were taken in **demo mode**, which feeds the dashboard with simulated values. It is handy when the broker or the hardware is not around.
 
 ## What I learned the hard way
 
