@@ -1,0 +1,20 @@
+# STM32 / CubeIDE / Keil
+Debug/
+Release/
+*.o
+*.elf
+*.map
+.metadata/
+# Python
+__pycache__/
+*.pyc
+.venv/
+# ROS 2
+build/
+install/
+log/
+# Divers
+.vscode/
+*.log
+.env
+Thumbs.db

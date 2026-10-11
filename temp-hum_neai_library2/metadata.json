@@ -1,0 +1,99 @@
+{
+    "accelerators": [],
+    "algorithm_type": "on_board_training",
+    "commit": "HEAD",
+    "compilation_date": "2026-07-31T00:36:19.310331",
+    "compilation_flags": {
+        "float_abi": "hard",
+        "fshort_enums": false,
+        "short_wchar": false
+    },
+    "compilation_str": "{'compilation_dict':{'request_type':'library','api':{'env':'PROD','version':'v3'},'version':{'web_api':{'env':'PROD','version':'v3'},'local_api':{'version':'2026.06.22.0','platform':'win64'},'studio':'5.2.0'},'compilation_flags':{'float_abi':'hard','short_wchar':false,'fshort_enums':false,'use_knowledge':false},'mcu':'cortex-m4_st_stm32f4_stm32f407g-disc1','sensor':'','accelerators':[],'request_origin':'manual','algorithm_type':'on_board_training','lib_version':'v3_b0d8eda','info':{'progression':{'evals_done':2150,'optimization_progress':0.1075,'elapsed_time':149,'cpu_info':{'cpu_nb_cores':16,'cpu_nb_cores_for_optimization':11},'state':'paused'},'max_ram':192000,'max_flash':1024000,'optimization_global_id':'18603f85ecb44a2a15e04a12d1e88ef2','version':{'local_api':'2026.06.22.0','studio':'5.2.0'},'creation_date':'2026-07-31T00:30:39+00:00'},'class_names':'nominal,anomaly','results':[{'result_id':125,'combination':{'type':'anomaly_detection','name':'MML','params':{'factor_z_score':0.93,'factor_z_max':0.8300000000000001,'factor_cor':0.56,'category_correlation_threshold':0.53,'category_ratio_threshold':0.77,'ratio_cv_threshold':1.58,'z_score_norm':'abs','sensitivity':1.4,'max_categories':5,'tmp_dir_path':null},'preprocessing_chain':[]},'model':null,'performance':{'performance':{'score':0.9903,'main_kpi':0.9975},'memory_usage':{'estimated_ram':184,'estimated_flash':164,'estimated_flash_knowledge':null}},'learning_min_lines':102,'knowledge':'eNqVVe1u2zAMfJXCvwtBFEl97FWCwnBjrzXg2JntBGuDvPsoyUviJehQ_5N4pE7Ho3wq9mOzH4dtM01t_1b8eNq8PD8Vu6FuOlmciql966uu7JpelkZCdbtr-qkd4hpk3fb7w1xO7WezAHbV73Jbzc3bMLbNJJssm2M1t0O5PZbz-9hM70NXx3TFXsePTABGopj-s9rOw1h-ltN2GGNNrQImlHbAhtnRFSWQhGCbEQY9gWd_W0f4JIw3IX4eEbQNIbJaaH7EOmPTRY79iqFUzlkO0Afn9CorX2qNdzafooOxDOgEP0W95vbYzh_p0hhySQvsId25a6qxF_lFt64rt_0ccVpLROg3VS_CpUwj1AEJnCEM7DgDot45boPxAOQDaDaGbCQbVTpmGVfH6iDR_nWJen89bN2iQKw1GCImEvEuR96iUPFy1FqMkNsLQTskb3Et-SHdk66b2S6bU5Fo_DpUCXASeY7JjRtRRAyQDNomP6JyxB4JWbPngD77T0KWxVyIDIBiGgzn2Ii5flQV4KZuSjbKkPGBSELeabTnv01q6rI_7F6baDtDsv0NsjZqCdHy5Kx2ZC7nMStpG0tfAQKQtl-xZfiHLSqL1rrgvXMOrLb0kK4136KLqIyT1stcahbTuMt5ZBWltoqw3vnwJd3omBVbUE6m3eqgyXtCGdiHbP33tPVKg7XWIwSnDfCVrFNaApYtBfqPtDJed2SlX0wihJFxlnfIPJb2_HJr7WGs0_ZGykWmz0_4kuYmPWllP4w7iRbV61Q8mLoyX0mmPQ8sCy1rfLLLPTZfUun7uVzq5Nm8i2Wfc0pcDe6SptX6SXXhHrg8rA-mXGqUFzmmarfvLn-Cw76WwPr5OJ__ADWk3BA=','knowledge_dat':null,'commit_tag_used':'v3_b0d8eda'}],'data':{'nb_cols':2,'nb_lines':[[{'file_type':'anomaly','nb_lines':100},{'file_type':'nominal','nb_lines':100},{'file_type':'anomaly','nb_lines':300},{'file_type':'nominal','nb_lines':300}]]},'toolchain_type':'gcc','only_emulators':false},'sign':95820,'license_key':'***'}",
+    "compile_emulators": true,
+    "compile_library": true,
+    "data": {
+        "nb_cols": 2,
+        "nb_lines": [
+            [
+                {
+                    "file_type": "anomaly",
+                    "nb_lines": 100
+                },
+                {
+                    "file_type": "nominal",
+                    "nb_lines": 100
+                },
+                {
+                    "file_type": "anomaly",
+                    "nb_lines": 300
+                },
+                {
+                    "file_type": "nominal",
+                    "nb_lines": 300
+                }
+            ]
+        ]
+    },
+    "learning_min_lines": 102,
+    "lib_limited": false,
+    "library_id": "6a6bee03c56976815aa9686f",
+    "library_md5sum": "619a50378c692d001b8fb1788b488392",
+    "mcu": "cortex-m4_st_stm32f4_stm32f407g-disc1",
+    "mcu_cpn": "STM32F407G-DISC1",
+    "mcu_display_name": "STM32F407G-DISC1 - STMicroelectronics",
+    "mcu_family": "STM32F4 Series",
+    "mcu_group": "demo",
+    "mcu_type": "cortex-m4",
+    "mcu_vendor": "STMicroelectronics",
+    "optimization_info": {
+        "creation_date": "2026-07-31T00:30:39+00:00",
+        "max_flash": 1024000,
+        "max_ram": 192000,
+        "optimization_global_id": "18603f85ecb44a2a15e04a12d1e88ef2",
+        "progression": {
+            "cpu_info": {
+                "cpu_nb_cores": 16,
+                "cpu_nb_cores_for_optimization": 11
+            },
+            "elapsed_time": 149,
+            "evals_done": 2150,
+            "optimization_progress": 0.1075,
+            "state": "paused"
+        },
+        "version": {
+            "local_api": "2026.06.22.0",
+            "studio": "5.2.0"
+        }
+    },
+    "performance": {
+        "memory_usage": {
+            "estimated_flash": 164,
+            "estimated_flash_knowledge": null,
+            "estimated_ram": 184
+        },
+        "performance": {
+            "main_kpi": 0.9975,
+            "score": 0.9903
+        }
+    },
+    "request_type": "library",
+    "sensor": "",
+    "studio_info": {
+        "local_api": {
+            "platform": "win64",
+            "version": "2026.06.22.0"
+        },
+        "studio": "5.2.0",
+        "web_api": {
+            "env": "PROD",
+            "version": "v3"
+        }
+    },
+    "toolchain_version": "arm-none-eabi-gcc (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 13.2.1 20231009",
+    "user_info": {
+        "company": "Eniso",
+        "email": "amine.nsiri@eniso.u-sousse.tn",
+        "first_name": "Amine",
+        "last_name": "Nsiri"
+    }
+}

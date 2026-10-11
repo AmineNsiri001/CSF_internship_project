@@ -1,0 +1,111 @@
+{
+  "signal_len": 2,
+  "dimension": 1,
+  "input_size": 2,
+  "max_categories": 5,
+  "ratio_cv_threshold": 1.5800000429153442,
+  "factor_z_score": 0.9300000071525574,
+  "factor_cor": 0.5600000023841858,
+  "factor_z_max": 0.8299999833106995,
+  "category_correlation_threshold": 0.5299999713897705,
+  "category_ratio_threshold": 0.7699999809265137,
+  "sensitivity": 1.399999976158142,
+  "learning_call_cnt": 100,
+  "z_mean_cv": 1.2310134172439575,
+  "z_max_cv": 1.6928114891052246,
+  "cor_cv": 0.9999997615814209,
+  "nbr_cv": 88,
+  "z_mean_threshold": 1.945001244544983,
+  "z_max_threshold": 3.5,
+  "cor_threshold": 0.9800000190734863,
+  "category_count": 4,
+  "categories": [
+    {
+      "mean_quant": {
+        "level": [
+          0,
+          255
+        ],
+        "min": 23.745834350585938,
+        "max": 65.5833511352539
+      },
+      "std_quant": {
+        "level": [
+          110,
+          255
+        ],
+        "max": 2.242894411087036
+      },
+      "learned_number": 24
+    },
+    {
+      "mean_quant": {
+        "level": [
+          0,
+          255
+        ],
+        "min": 26.945158004760742,
+        "max": 55.11451721191406
+      },
+      "std_quant": {
+        "level": [
+          151,
+          255
+        ],
+        "max": 3.6366798877716064
+      },
+      "learned_number": 62
+    },
+    {
+      "mean_quant": {
+        "level": [
+          0,
+          255
+        ],
+        "min": 33.27500534057617,
+        "max": 46.400001525878906
+      },
+      "std_quant": {
+        "level": [
+          83,
+          255
+        ],
+        "max": 1.7291609048843384
+      },
+      "learned_number": 8
+    },
+    {
+      "mean_quant": {
+        "level": [
+          0,
+          255
+        ],
+        "min": 28.01666831970215,
+        "max": 47.06666564941406
+      },
+      "std_quant": {
+        "level": [
+          231,
+          255
+        ],
+        "max": 1.1585427522659302
+      },
+      "learned_number": 6
+    }
+  ],
+  "category_order": [
+    1,
+    0,
+    2,
+    3
+  ],
+  "z_score_norm": "abs",
+  "z_mean_threshold_min": 1.2999999523162842,
+  "z_mean_threshold_max": 4.0,
+  "z_max_threshold_min": 3.5,
+  "z_max_threshold_max": 25.0,
+  "cor_threshold_min": 0.6000000238418579,
+  "cor_threshold_max": 0.9800000190734863,
+  "min_category_samples": 5,
+  "update_threshold": 3
+}
